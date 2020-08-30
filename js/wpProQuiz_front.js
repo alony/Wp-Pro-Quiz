@@ -940,6 +940,7 @@ wpProQuizReady(function () {
                 str = str.replace(/\u201C/, '"');
                 str = str.replace(/\u201D/, '"');
 
+		str = str.replace(/\s+/g, ' ').replace(/\s([.,!'":])/g, "$1");
                 return $.trim(str).toLowerCase();
             },
 
